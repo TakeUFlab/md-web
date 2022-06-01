@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Teaching from "../assets/Teaching.svg";
+  import Teaching from '@/assets/Teaching.svg';
 </script>
 
 <main>
