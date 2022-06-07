@@ -1,7 +1,4 @@
-import App from './App.svelte';
-import '@/scss/global.scss';
-const app = new App({
-  target: document.getElementById('app'),
-});
+import { createApp } from 'vue'
+import App from './App.vue'
 
-export default app;
+createApp(App).mount('#app')
