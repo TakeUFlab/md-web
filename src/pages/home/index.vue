@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import contentTempVue from "./components/content.temp.vue";
+</script>
 
 <template>
   <div class="intro">
@@ -9,12 +11,20 @@
       <button>登入</button>
     </div>
   </div>
+  <content-temp-vue>
+    <template #title> What is NewMD </template>
+    <template #description>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque ut, nam
+      corporis exercitationem libero, at cumque totam nostrum repudiandae autem
+      nobis necessitatibus? Numquam asperiores esse facilis veniam a iusto
+      repudiandae?
+    </template>
+  </content-temp-vue>
 </template>
 
 <style lang="scss" scoped>
 .intro {
-  width: 100vw;
-  padding: 50px 20px;
+  width: 100%;
   height: 800px;
   max-height: 100vh;
   display: flex;

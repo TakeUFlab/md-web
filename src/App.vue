@@ -6,4 +6,9 @@
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+#app {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+</style>
