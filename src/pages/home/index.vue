@@ -1,15 +1,18 @@
 <script lang="ts" setup>
 import contentTempVue from "./components/content.temp.vue";
+import footerBlockVue from "../../components/footerBlock.vue";
 import { reactive } from "vue";
 interface content {
   title: string;
   description: string;
+  revert: boolean;
 }
 const contents = reactive<Array<content>>([
   {
     title: "什麼是 NewMD",
     description:
-      "NewMD 是一個專為明道學生設計的雲端平台，運用網路技術抓取明道各班之課表，已解決課表載入過慢以及其導致之延伸問題，也達到幫明道伺服器分流之目的",
+      "NewMD 是一個專為明道學生設計的雲端平台，運用網路技術抓取明道各班之課表，以解決課表載入過慢以及其導致之延伸問題，也達到幫明道伺服器分流之目的",
+    revert: false,
   },
 ]);
 </script>
@@ -23,10 +26,11 @@ const contents = reactive<Array<content>>([
       <button>登入</button>
     </div>
   </div>
-  <content-temp-vue v-for="i in contents">
+  <content-temp-vue v-for="i in contents" :revert="i.revert">
     <template #title> {{ i.title }} </template>
     <template #description> {{ i.description }} </template>
   </content-temp-vue>
+  <footer-block-vue></footer-block-vue>
 </template>
 
 <style lang="scss" scoped>

@@ -1,3 +1,17 @@
+<script lang="ts" setup>
+import { onMounted, ref } from "vue";
+
+const props = defineProps<{
+  revert: boolean;
+}>();
+const revertCss = ref("row");
+onMounted(() => {
+  if (props.revert) {
+    revertCss.value = "row-reverse";
+  }
+});
+</script>
+
 <template>
   <div class="content">
     <div class="title">
@@ -18,7 +32,7 @@
   height: auto;
   min-height: 500px;
   display: flex;
-  flex-direction: row;
+  flex-direction: v-bind(revertCss);
   flex-wrap: wrap;
 
   .title {
