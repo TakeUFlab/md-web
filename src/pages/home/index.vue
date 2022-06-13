@@ -1,5 +1,17 @@
 <script lang="ts" setup>
 import contentTempVue from "./components/content.temp.vue";
+import { reactive } from "vue";
+interface content {
+  title: string;
+  description: string;
+}
+const contents = reactive<Array<content>>([
+  {
+    title: "什麼是 NewMD",
+    description:
+      "NewMD 是一個專為明道學生設計的雲端平台，運用網路技術抓取明道各班之課表，已解決課表載入過慢以及其導致之延伸問題，也達到幫明道伺服器分流之目的",
+  },
+]);
 </script>
 
 <template>
@@ -11,18 +23,14 @@ import contentTempVue from "./components/content.temp.vue";
       <button>登入</button>
     </div>
   </div>
-  <content-temp-vue>
-    <template #title> What is NewMD </template>
-    <template #description>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque ut, nam
-      corporis exercitationem libero, at cumque totam nostrum repudiandae autem
-      nobis necessitatibus? Numquam asperiores esse facilis veniam a iusto
-      repudiandae?
-    </template>
+  <content-temp-vue v-for="i in contents">
+    <template #title> {{ i.title }} </template>
+    <template #description> {{ i.description }} </template>
   </content-temp-vue>
 </template>
 
 <style lang="scss" scoped>
+@import "../../scss/global.scss";
 .intro {
   width: 100%;
   height: 800px;
@@ -35,6 +43,9 @@ import contentTempVue from "./components/content.temp.vue";
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  @include phone {
+    padding: 10px;
+  }
   h1 {
     font-size: 3rem;
     color: #003cff;

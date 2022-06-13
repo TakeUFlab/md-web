@@ -27,7 +27,7 @@
     font-weight: 700;
     height: inherit;
     color: #fff;
-    background-color: #06f;
+    background-color: #3a89ff;
     display: flex;
     align-items: center;
     padding: 0 10% 0 0;
@@ -55,6 +55,14 @@
     .title,
     .description {
       width: 100%;
+    }
+    .title {
+      min-height: 50vw;
+      padding: 0;
+      justify-content: center;
+    }
+    .description {
+      min-height: 100vw;
     }
   }
 }
