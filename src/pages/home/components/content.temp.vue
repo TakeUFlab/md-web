@@ -44,7 +44,8 @@ onMounted(() => {
     background-color: #3a89ff;
     display: flex;
     align-items: center;
-    padding: 0 10% 0 0;
+    padding: 0 10%;
+    flex-direction: v-bind(revertCss);
     justify-content: flex-end;
   }
   .description {
@@ -66,6 +67,7 @@ onMounted(() => {
   }
   @include pad {
     flex-direction: column;
+    min-height: auto;
     .title,
     .description {
       width: 100%;

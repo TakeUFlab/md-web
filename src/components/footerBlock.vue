@@ -7,7 +7,7 @@
 
 <style lang="scss" scoped>
 .footer {
-  padding: 50px 0;
+  padding: 50px 10px;
   background-color: #252525;
   h3 {
     font-size: 1rem;
