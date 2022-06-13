@@ -4,7 +4,9 @@
       <slot name="title"></slot>
     </div>
     <div class="description">
-      <slot name="description"></slot>
+      <p>
+        <slot name="description"></slot>
+      </p>
     </div>
   </div>
 </template>
@@ -34,6 +36,19 @@
   .description {
     width: 50%;
     height: inherit;
+    background-color: #eee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    p {
+      max-width: 500px;
+      line-height: 30px;
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: #646464;
+    }
   }
   @include pad {
     flex-direction: column;
