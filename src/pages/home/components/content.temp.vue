@@ -40,7 +40,7 @@ onMounted(() => {
     font-size: 2rem;
     font-weight: 700;
     height: inherit;
-    color: #fff;
+    color: #dddddd;
     background-color: #3a89ff;
     display: flex;
     align-items: center;
@@ -51,7 +51,7 @@ onMounted(() => {
   .description {
     width: 50%;
     height: inherit;
-    background-color: #eee;
+    background-color: #232323;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -62,7 +62,7 @@ onMounted(() => {
       line-height: 30px;
       font-size: 1.1rem;
       font-weight: 300;
-      color: #646464;
+      color: #aaa;
     }
   }
   @include pad {

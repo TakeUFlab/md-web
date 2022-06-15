@@ -28,8 +28,8 @@ const contents = reactive<Array<content>>([
     <h1>New MD</h1>
     <h2>拯救明道學生的課表系統</h2>
     <div class="logins">
-      <button>首次登入</button>
-      <button>登入</button>
+      <router-link to="/login">首次登入</router-link>
+      <router-link to="/login">登入</router-link>
     </div>
   </div>
   <content-temp-vue v-for="i in contents" :revert="i.revert">
@@ -67,9 +67,9 @@ const contents = reactive<Array<content>>([
   }
   .logins {
     margin-top: 20px;
-    button {
+    a {
+      text-decoration: none;
       margin: 0 10px;
-      cursor: pointer;
       background-color: #003cff;
       border: 1px solid #003cff;
       color: #fff;
