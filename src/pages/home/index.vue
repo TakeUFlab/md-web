@@ -40,7 +40,7 @@ const contents = reactive<Array<content>>([
 </template>
 
 <style lang="scss" scoped>
-@import "../../scss/global.scss";
+@import "@/scss/global.scss";
 .intro {
   width: 100%;
   height: 800px;
