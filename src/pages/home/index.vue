@@ -28,7 +28,7 @@ const contents = reactive<Array<content>>([
     <h1>New MD</h1>
     <h2>拯救明道學生的課表系統</h2>
     <div class="logins">
-      <router-link to="/login">首次登入</router-link>
+      <router-link to="/login?first=true">首次登入</router-link>
       <router-link to="/login">登入</router-link>
     </div>
   </div>
